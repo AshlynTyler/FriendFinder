@@ -35,6 +35,8 @@ app.post("/api/friends", function(req,res){
             closestFriend = currentFriend;
         }
 
+        friends.list.push(req.body)
+
         return res.json(closestFriend)
     }
 })
