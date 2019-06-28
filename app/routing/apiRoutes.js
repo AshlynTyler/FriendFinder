@@ -6,6 +6,16 @@ var friends = require("../data/friends.js")
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get("/survey", function(req,res){
+    res.sendFile(path.join(__dirname, "app/public/survey.html"));
+})
+
+app.get("/", function(req,res){
+    res.sendFile(path.join(__dirname, "home.html"));
+})
+
+
+
 app.get("/api/friends", function(req,res){
     return res.json(friends.list);
 })

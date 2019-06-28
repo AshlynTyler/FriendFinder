@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+
+<head>
+    <meta charset='UTF-8'>
+
+    <title>
+        Survey!
+    </title>
+
+    <style>
+        *{
+            text-align:center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        #submit-button{
+            font-size: 30px;
+            margin-top: 30px;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>It's a Survey!</h1>
+
+    <form id="survey-form">
+        <p>Was yo name?</p>
+        <input name="name">
+        <p>watcha look like?  (Link to any dumb picture you find online)</p>
+        <input name="image">
+
+        <p>answer these questions with a 1 (not at all like me) to 5 (a lot like me) answer.</p>
+
+    
+        <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+        <input type="radio" name="answer-1" value="1"> 1
+        <input type="radio" name="answer-1" value="2"> 2
+        <input type="radio" name="answer-1" value="3"> 3
+        <input type="radio" name="answer-1" value="4"> 4
+        <input type="radio" name="answer-1" value="5"> 5
+
+        <p>Generally speaking, you rely more on your experience than your imagination.</p>
+        <input type="radio" name="answer-2" value="1"> 1
+        <input type="radio" name="answer-2" value="2"> 2
+        <input type="radio" name="answer-2" value="3"> 3
+        <input type="radio" name="answer-2" value="4"> 4
+        <input type="radio" name="answer-2" value="5"> 5
+
+        <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
+        <input type="radio" name="answer-3" value="1"> 1
+        <input type="radio" name="answer-3" value="2"> 2
+        <input type="radio" name="answer-3" value="3"> 3
+        <input type="radio" name="answer-3" value="4"> 4
+        <input type="radio" name="answer-3" value="5"> 5
+
+        <p>You rarely do something just out of sheer curiosity.</p>
+        <input type="radio" name="answer-4" value="1"> 1
+        <input type="radio" name="answer-4" value="2"> 2
+        <input type="radio" name="answer-4" value="3"> 3
+        <input type="radio" name="answer-4" value="4"> 4
+        <input type="radio" name="answer-4" value="5"> 5
+
+        <p>People can rarely upset you.</p>
+        <input type="radio" name="answer-5" value="1"> 1
+        <input type="radio" name="answer-5" value="2"> 2
+        <input type="radio" name="answer-5" value="3"> 3
+        <input type="radio" name="answer-5" value="4"> 4
+        <input type="radio" name="answer-5" value="5"> 5
+
+        <p>It is often difficult for you to relate to other people’s feelings.</p>
+        <input type="radio" name="answer-6" value="1"> 1
+        <input type="radio" name="answer-6" value="2"> 2
+        <input type="radio" name="answer-6" value="3"> 3
+        <input type="radio" name="answer-6" value="4"> 4
+        <input type="radio" name="answer-6" value="5"> 5
+
+        <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+        <input type="radio" name="answer-7" value="1"> 1
+        <input type="radio" name="answer-7" value="2"> 2
+        <input type="radio" name="answer-7" value="3"> 3
+        <input type="radio" name="answer-7" value="4"> 4
+        <input type="radio" name="answer-7" value="5"> 5
+
+        <p>You rarely get carried away by fantasies and ideas.</p>
+        <input type="radio" name="answer-8" value="1"> 1
+        <input type="radio" name="answer-8" value="2"> 2
+        <input type="radio" name="answer-8" value="3"> 3
+        <input type="radio" name="answer-8" value="4"> 4
+        <input type="radio" name="answer-8" value="5"> 5
+
+        <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+        <input type="radio" name="answer-9" value="1"> 1
+        <input type="radio" name="answer-9" value="2"> 2
+        <input type="radio" name="answer-9" value="3"> 3
+        <input type="radio" name="answer-9" value="4"> 4
+        <input type="radio" name="answer-9" value="5"> 5
+
+        <p>You feel more energetic after spending time with a group of people.</p>
+        <input type="radio" name="answer-10" value="1"> 1
+        <input type="radio" name="answer-10" value="2"> 2
+        <input type="radio" name="answer-10" value="3"> 3
+        <input type="radio" name="answer-10" value="4"> 4
+        <input type="radio" name="answer-10" value="5"> 5
+
+        <br>
+        <input type="submit" id="submit-button">
+    </form>
+
+    <script>
+
+        $("#survey-form").submit(function(event){
+            event.preventDefault()
+            let data = $("#survey-form :input").serializeArray();
+            console.log(data)
+        })
+
+    </script>
+</body>
