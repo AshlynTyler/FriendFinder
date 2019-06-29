@@ -3,7 +3,7 @@
 const list = [
     {
         name: "Ahmed",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAq7AAAAJDAwYzI4NTQ4LWYwZWUtNGFkYS1hNTYwLTZjYzkwY2ViZDA3OA.jpg",
+        photo: "https://www.cl.cam.ac.uk/~ahz22/images/profile_photo.png",
         scores: [
           "5",
           "1",
@@ -67,7 +67,7 @@ const list = [
       },
       {
         name: "Lou Ritter",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAkDAAAAJDhhZTI5NTk2LWQzZjUtNDJjZi1hMTM2LTQ3ZjNmYjE0YmY2NA.jpg",
+        photo: "https://anninc.scene7.com/is/image/LO/495707_4899?$plp$",
         scores: [
           "4",
           "3",
@@ -83,7 +83,7 @@ const list = [
       },
       {
         name: "Jordan Biason",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAisAAAAJGUxYzc4YzA0LWQxMzUtNGI4NS04YTFiLTkwYzM0YTZkNzA2NA.jpg",
+        photo: "https://www.sat7uk.org//wp-content/uploads/2012/05/MidEast-man-mdm-1.jpg",
         scores: [
           "4",
           "4",

@@ -21,6 +21,18 @@
             font-size: 30px;
             margin-top: 30px;
         }
+        #match{
+            position: fixed;
+            left:33%;
+            top:20%;
+
+            width:33%;
+            background:#ccddff;
+        }
+        #match-pic{
+            margin:10%;
+            width:80%;
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -116,8 +128,32 @@
 
         $("#survey-form").submit(function(event){
             event.preventDefault()
-            let data = $("#survey-form :input").serializeArray();
-            console.log(data)
+            let dataArray = $("#survey-form :input").serializeArray();
+
+            let data = {
+                name: dataArray[0].value,
+                photo: dataArray[1].value,
+                scores: []
+            }
+
+            for(let i = 2; i < dataArray.length;i++){
+                data.scores.push(dataArray[i].value)
+            }
+            
+            $.ajax({
+                type:"POST",
+                url:"/api/friends",
+                data:data
+            }).then(function(res){
+
+
+                $("body").append(`
+                <div id="match">
+                    <p>Your closest match:</p>
+                    <p>${res.name}</p>
+                    <img id="match-pic" alt=${res.name} src=${res.photo}>
+                </div> `)
+            })
         })
 
     </script>

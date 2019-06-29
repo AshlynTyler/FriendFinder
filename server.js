@@ -34,16 +34,20 @@ app.post("/api/friends", function(req,res){
 
     let userScores = req.body.scores;
 
+    let closestFriend;
+
+    
+
+
+    let closestTotal = 41;
+
+
     for(let i = 0;i < friends.list.length; i++){
         let currentFriend = friends.list[i];
 
         let friendScores = currentFriend.scores;
 
         let currentTotal = 0;
-
-        let closestTotal = 41;
-
-        let closestFriend;
 
         for(let j = 0; j < 10; j++){
             currentTotal += Math.abs(userScores[i] - friendScores[i])
@@ -54,11 +58,9 @@ app.post("/api/friends", function(req,res){
 
             closestFriend = currentFriend;
         }
-
-        friends.list.push(req.body)
-
-        return res.json(closestFriend)
     }
+    friends.list.push(req.body)
+    return res.json(closestFriend)
 })
 
 // Starts the server to begin listening
